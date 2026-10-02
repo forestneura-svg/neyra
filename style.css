@@ -1731,3 +1731,45 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-03 .работа__ждёт { grid-row: 1; grid-column: 1; }
     #экран-03 .работа__формат, #экран-03 .работа__подпись { grid-column: 1; }
   }
+
+/* экран 04 */
+#экран-04 .бенто-я { display: grid; gap: 1rem; }
+  #экран-04 .ячейка { position: relative; padding: 1.5rem; border-radius: var(--радиус-плитки); overflow: hidden; }
+  #экран-04 .ячейка p { margin: 0 0 1rem; font-size: var(--кегль-текст); line-height: 1.6; }
+  #экран-04 .ячейка > :last-child { margin-bottom: 0; }
+  #экран-04 .рассказ { display: grid; gap: 1.5rem; }
+  #экран-04 .ячейка .цитата-я { margin: 0; padding: 1.25rem 1.25rem 1.25rem 1.5rem; border-radius: var(--радиус-карточки);
+      font-size: var(--кегль-лид); font-weight: 600; line-height: 1.45; border-left: 3px solid; }
+  #экран-04 .галочки { margin: 0; padding: 0; list-style: none; display: grid; gap: 1rem; }
+  #экран-04 .галочки li { display: grid; grid-template-columns: 1.75rem 1fr; gap: .75rem; font-size: var(--кегль-текст); line-height: 1.5; }
+  #экран-04 .галочки li::before { content: "✓"; display: grid; place-items: center; width: 1.75rem; height: 1.75rem;
+      border-radius: 50%; font-size: var(--кегль-мелкий); font-weight: 800; }
+  #экран-04 .галочки b { display: block; }
+  #экран-04 .полоса { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; }
+  #экран-04 .полоса b { display: block; font-size: var(--кегль-цифра); font-weight: 800; line-height: 1; }
+  #экран-04 .полоса span { display: block; margin-top: .375rem; font-size: var(--кегль-мелкий); }
+
+  #экран-04.тёмный .ячейка { background: color-mix(in srgb, var(--цвет-тёмный-текст) 6%, transparent);
+      border: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 20%, transparent); }
+  #экран-04.тёмный .ячейка p, #экран-04.тёмный .галочки li { color: color-mix(in srgb, var(--цвет-тёмный-текст) 82%, transparent); }
+  #экран-04.тёмный .ячейка .цитата-я { color: var(--цвет-тёмный-текст); border-left-color: var(--цвет-акцент-яркий);
+      background: color-mix(in srgb, var(--цвет-акцент-яркий) 10%, transparent); }
+  #экран-04.тёмный .галочки li::before { background: color-mix(in srgb, var(--цвет-акцент-яркий) 18%, transparent); color: var(--цвет-акцент-яркий); }
+  #экран-04.тёмный .галочки b, #экран-04.тёмный .полоса b { color: var(--цвет-тёмный-текст); }
+  #экран-04.тёмный .полоса span { color: var(--цвет-акцент-яркий); }
+  #экран-04.тёмный .кикер { color: var(--цвет-акцент-яркий); }
+  #экран-04.тёмный .кикер::before { background: var(--цвет-акцент-яркий); }
+  #экран-04.светлый .ячейка { background: var(--цвет-фон-карточки); border: 1px solid var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-04.светлый .ячейка p, #экран-04.светлый .галочки li { color: var(--цвет-текст-мягкий); }
+  #экран-04.светлый .ячейка .цитата-я { color: var(--цвет-текст); border-left-color: var(--цвет-акцент);
+      background: var(--цвет-тёплый-мягкий); }
+  #экран-04.светлый .галочки li::before { background: var(--цвет-тёплый-мягкий); color: var(--цвет-акцент); }
+  #экран-04.светлый .галочки b, #экран-04.светлый .полоса b { color: var(--цвет-текст); }
+  #экран-04.светлый .полоса span { color: var(--цвет-акцент); }
+
+  @media (min-width: 900px) {
+    #экран-04 .бенто-я { grid-template-columns: 1.5fr 1fr; gap: 1.25rem; }
+    #экран-04 .рассказ { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem; }
+    #экран-04 .пункты-ячейка { grid-row: span 2; padding: 2rem; }
+    #экран-04 .ячейка { padding: 1.75rem 2rem; }
+  }
