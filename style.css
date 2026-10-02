@@ -1704,3 +1704,30 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-02 .сетка-услуг { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1rem; }
     #экран-02 .услуга { min-height: 15rem; padding: 1.75rem 1.625rem 1.5rem; }
   }
+
+/* экран 03 */
+#экран-03 .работа__свет { position: absolute; z-index: 3; left: 0; right: 0; top: 0; height: var(--нить);
+      background: linear-gradient(90deg, transparent, var(--цвет-акцент-яркий), transparent); pointer-events: none; }
+  #экран-03 .работа__ждёт { position: relative; z-index: 2; grid-row: 2; grid-column: 1; place-self: center; white-space: nowrap;
+      padding: .375rem .75rem; border-radius: 9em; font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: var(--разрядка-кикера); }
+  #экран-03 .пояснение { display: flex; justify-content: center; align-items: center; gap: .625rem; margin: 1.75rem auto 0;
+      font-size: var(--кегль-текст); font-weight: 600; text-align: center; }
+  #экран-03 .пояснение::before { content: ""; flex: 0 0 .625rem; height: .625rem; border-radius: 50%;
+      background: var(--цвет-акцент-яркий); box-shadow: var(--тень-чип); }
+
+  #экран-03.светлый .работа__ждёт, #экран-03.тёмный .работа__ждёт { color: var(--цвет-акцент-яркий);
+      border: 1px solid color-mix(in srgb, var(--цвет-акцент-яркий) 45%, transparent); }
+  #экран-03.светлый .пояснение { color: var(--цвет-текст); }
+  #экран-03.тёмный .пояснение { color: var(--цвет-тёмный-текст); }
+
+  @media (min-width: 640px) {
+    #экран-03.светлый .работа__итог, #экран-03.тёмный .работа__итог { color: var(--цвет-акцент-яркий); }
+  }
+  @media (min-width: 900px) {
+    #экран-03 .работа:first-child { grid-column: 1 / span 2; grid-row: 1 / span 2; }
+    #экран-03 .работа:first-child .работа__подпись b { font-size: var(--кегль-лид); }
+  }
+  @media (max-width: 639px) {
+    #экран-03 .работа__ждёт { grid-row: 1; grid-column: 1; }
+    #экран-03 .работа__формат, #экран-03 .работа__подпись { grid-column: 1; }
+  }
