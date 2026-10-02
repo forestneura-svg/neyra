@@ -1807,3 +1807,16 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-05 .способ { max-width: 26rem; }
     #экран-05 .кадр { max-width: 22rem; margin-right: 0; }
   }
+
+/* экран 06 */
+#экран-06 .подвал__сетка { align-items: start; }
+  #экран-06 .подвал__лого { font-size: var(--кегль-лид); font-weight: 800; }
+  #экран-06 .подвал__ссылки a { font-size: var(--кегль-текст); font-weight: 600; text-decoration: none; }
+  #экран-06 .подвал__сетка p { margin: 0; font-size: var(--кегль-текст); }
+  #экран-06.светлый .подвал__ссылки a { color: var(--цвет-акцент); }
+  #экран-06.тёмный .подвал__ссылки a { color: var(--цвет-акцент-яркий); }
+  #экран-06.светлый .подвал__сетка p { color: var(--цвет-текст-мягкий); }
+  #экран-06.тёмный .подвал__сетка p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 72%, transparent); }
+  @media (min-width: 900px) {
+    #экран-06 .подвал__сетка { grid-template-columns: 2fr 1fr; }
+  }
