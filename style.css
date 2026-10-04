@@ -1775,7 +1775,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   }
 
 /* экран 05 */
-#экран-05 .связь { display: grid; gap: 2rem; align-items: center; }
+#экран-05 .связь { max-width: 42rem; }
   #экран-05 .способ { display: flex; align-items: center; gap: 1rem; margin: 1.75rem 0 0; padding: 1.125rem 1.25rem;
       border-radius: var(--радиус-плитки); }
   #экран-05 .способ .иконка { flex: none; width: 2.75rem; height: 2.75rem; padding: .625rem; border-radius: 50%; }
@@ -1784,11 +1784,6 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-05 .действие { display: grid; gap: 1rem; justify-items: start; margin-top: 1.5rem; }
   #экран-05 .к-работам { font-size: var(--кегль-текст); font-weight: 600; text-underline-offset: .2em; }
   #экран-05 .подпись-автора { margin: 1.75rem 0 0; font-size: var(--кегль-текст); }
-  #экран-05 .кадр { position: relative; margin: 0 auto; width: 100%; max-width: 18rem; border-radius: var(--радиус-плитки);
-      overflow: hidden; box-shadow: var(--тень-глубокая); }
-  #экран-05 .кадр::before { content: ""; position: absolute; z-index: 1; inset: 0 0 auto; height: var(--нить);
-      background: linear-gradient(90deg, transparent, var(--цвет-акцент-яркий), transparent); }
-  #экран-05 .кадр .заглушка-картинки { aspect-ratio: 4 / 5; border-radius: 0; }
 
   #экран-05.светлый .способ { background: var(--цвет-тёмный-фон-2); box-shadow: var(--тень-глубокая); }
   #экран-05.тёмный .способ { background: color-mix(in srgb, var(--цвет-тёмный-текст) 6%, transparent);
@@ -1803,9 +1798,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-05.тёмный .подпись-автора { color: color-mix(in srgb, var(--цвет-тёмный-текст) 72%, transparent); }
 
   @media (min-width: 900px) {
-    #экран-05 .связь { grid-template-columns: 1.3fr 1fr; gap: 4rem; }
     #экран-05 .способ { max-width: 26rem; }
-    #экран-05 .кадр { max-width: 22rem; margin-right: 0; }
   }
 
 /* экран 06 */
