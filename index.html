@@ -107,7 +107,7 @@
   </div>
   </div>
   <header class="шапка">
-    <a class="шапка__лого" href="#">Нейра</a>
+    <a class="шапка__лого" href="#"><img class="лого-знак" src="img/logo-neyra.webp" alt="Нейра" width="600" height="130"></a>
     <span class="шапка__лиц"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6L12 3z"/>
 </svg><span><span class="полн">Отвечаю в Телеграме сама</span><span class="кратко">Отвечаю сама</span></span></span>
@@ -133,6 +133,8 @@
   </div>
 </section>
 <style>
+/* логотип NEYRA вместо слова (принесён человеком 08.10.2026) */
+#экран-1 .шапка__лого img.лого-знак { display: block; width: auto; height: 1.25rem; border-radius: 0; border: 0; box-shadow: none; outline: 0; background: none; object-fit: contain; }
 /* Вид первого экрана, выбранный человеком 23.09.2026 (проба «Ж · NEYRA и россыпь»).
    Планы по глубине: Нейра — впереди, надпись NEYRA — за ней, блёстки и дорожки
    микросхем — позади надписи. Краски — только переменные палитры. */
@@ -476,8 +478,8 @@
 <div class="блок__внутри">
   <div class="секция__шапка секция__шапка--центр">
     <p class="кикер">Сделано на нейросетях</p>
-    <h2>Что уже сделано</h2>
-    <p class="лид секция__лид">Шесть работ из разных задач — от карточки товара до персонажа бренда</p>
+    <h2>Работы</h2>
+    <p class="лид секция__лид">Карточки, реклама, логотипы, презентации, сайты — всё на нейросетях</p>
   </div>
   <div class="работы__сетка секция__тело">
     <div class="работа">
@@ -508,6 +510,22 @@
       <span class="работа__подпись"><b>Меню кофейни</b>Макет А4 с ценами и фото напитка<span class="работа__итог">Готов к печати</span></span>
     </div>
     <div class="работа">
+      <span class="работа__формат">сайт</span>
+      <span class="работа__свет" aria-hidden="true"></span>
+      <figure class="мокап работа__вид">
+        <img src="img/rabota-sait-glyanec.webp" alt="Сайт детейлинг-студии «Глянец» на ноутбуке и телефоне: тёмный первый экран с заголовком «Машина блестит как из салона» и фото студии" loading="lazy" decoding="async">
+      </figure>
+      <span class="работа__подпись"><b>Сайт студии «Глянец»</b>Первый экран, услуги и цены — к логотипу той же студии<span class="работа__итог">Сразу для компьютера и телефона</span></span>
+    </div>
+    <div class="работа">
+      <span class="работа__формат">логотип</span>
+      <span class="работа__свет" aria-hidden="true"></span>
+      <figure class="мокап работа__вид">
+        <img src="img/rabota-logotip.webp" alt="Логотип детейлинг-студии «Глянец»: линия кузова с искрой-бликом, на сером и чёрном фоне, на вывеске и визитке" loading="lazy" decoding="async">
+      </figure>
+      <span class="работа__подпись"><b>Детейлинг-студия «Глянец»</b>Знак, надпись и примеры в жизни<span class="работа__итог">Готов для вывески и визиток</span></span>
+    </div>
+    <div class="работа">
       <span class="работа__формат">кампания</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
@@ -515,6 +533,14 @@
         <figure class="работа__было"><img src="img/bylo-cvety.webp" alt="Тот же букет белых роз дома, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
       </figure>
       <span class="работа__подпись"><b>Цветочный магазин</b>Баннер, сторис и пост в одном стиле<span class="работа__итог">Одна кампания на все площадки</span></span>
+    </div>
+    <div class="работа">
+      <span class="работа__формат">презентация</span>
+      <span class="работа__свет" aria-hidden="true"></span>
+      <figure class="мокап работа__вид">
+        <img src="img/rabota-prezentaciya-most.webp" alt="Четыре слайда презентации онлайн-школы английского «Мост»: обложка с мостом, как проходят занятия, путь за три месяца, цены и кнопка записи" loading="lazy" decoding="async">
+      </figure>
+      <span class="работа__подпись"><b>Школа английского «Мост»</b>Четыре слайда в одном стиле<span class="работа__итог">Готова к показу и рассылке</span></span>
     </div>
     <div class="работа">
       <span class="работа__формат">персонаж</span>
@@ -596,7 +622,7 @@
 <div class="блок__внутри">
   <div class="подвал__сетка">
     <div>
-      <a class="подвал__лого" href="#экран-1">Нейра</a>
+      <a class="подвал__лого" href="#экран-1"><img class="лого-знак" src="img/logo-neyra.webp" alt="Нейра" width="600" height="130" loading="lazy"></a>
       <p>Нейросети для вашего дела</p>
     </div>
     <div>
