@@ -8,6 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Нейра — нейросети для вашего дела">
 <meta property="og:description" content="Нейра — нейросети для вашего дела">
+<meta property="og:image" content="https://forestneura-svg.github.io/neyra/img/card.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,6 +136,11 @@
 <style>
 /* логотип NEYRA вместо слова (принесён человеком 08.10.2026) */
 #экран-1 .шапка__лого img.лого-знак { display: block; width: auto; height: 1.25rem; border-radius: 0; border: 0; box-shadow: none; outline: 0; background: none; object-fit: contain; }
+/* декоративная линия перечёркивала «Отвечаю сама» — подложка цвета фона (17.10.2026) */
+#экран-1 .шапка__лиц { position: relative; z-index: 6; padding: .3em .7em; border-radius: 9em;
+  background: color-mix(in srgb, var(--цвет-фон) 92%, transparent); }
+/* пункты списка на компьютере были 12,8 px — не мельче 14 px (17.10.2026) */
+#экран-1 .список-иконок li > span { font-size: max(1em, .875rem); }
 /* Вид первого экрана, выбранный человеком 23.09.2026 (проба «Ж · NEYRA и россыпь»).
    Планы по глубине: Нейра — впереди, надпись NEYRA — за ней, блёстки и дорожки
    микросхем — позади надписи. Краски — только переменные палитры. */
@@ -486,8 +492,8 @@
       <span class="работа__формат">карточка товара</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-tort.webp" alt="Карточка для маркетплейса: шоколадный торт с мраморным кремом на подставке, надпись «Торт на заказ»" loading="lazy" decoding="async">
-        <figure class="работа__было"><img src="img/bylo-tort.webp" alt="Тот же торт на кухонном столе, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
+        <img src="img/rabota-tort.webp" srcset="img/rabota-tort-480.webp 480w, img/rabota-tort.webp 1086w" sizes="(max-width: 639px) 35vw, 50vw" width="1086" height="1448" alt="Карточка для маркетплейса: шоколадный торт с мраморным кремом на подставке, надпись «Торт на заказ»" loading="lazy" decoding="async">
+        <figure class="работа__было"><img src="img/bylo-tort.webp" srcset="img/bylo-tort-200.webp 200w, img/bylo-tort.webp 400w" sizes="(max-width: 639px) 15vw, 13vw" width="400" height="533" alt="Тот же торт на кухонном столе, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
       </figure>
       <span class="работа__подпись"><b>Торт на заказ</b>Карточка для маркетплейса из фото с телефона<span class="работа__итог">Без фотографа и студии</span></span>
     </div>
@@ -495,8 +501,8 @@
       <span class="работа__формат">рекламный кадр</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-pekarnya.webp" alt="Рекламный кадр пекарни: противень горячих булочек-завитков в утреннем свете, надпись «Пекарня „Закваска“»" loading="lazy" decoding="async">
-        <figure class="работа__было"><img src="img/bylo-pekarnya.webp" alt="Те же булочки на противне, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
+        <img src="img/rabota-pekarnya.webp" srcset="img/rabota-pekarnya-480.webp 480w, img/rabota-pekarnya.webp 1200w" sizes="(max-width: 639px) 35vw, 30vw" width="1200" height="900" alt="Рекламный кадр пекарни: противень горячих булочек-завитков в утреннем свете, надпись «Пекарня „Закваска“»" loading="lazy" decoding="async">
+        <figure class="работа__было"><img src="img/bylo-pekarnya.webp" srcset="img/bylo-pekarnya-200.webp 200w, img/bylo-pekarnya.webp 400w" sizes="(max-width: 639px) 15vw, 13vw" width="400" height="533" alt="Те же булочки на противне, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
       </figure>
       <span class="работа__подпись"><b>Пекарня «Закваска»</b>Рекламный кадр из снимка противня<span class="работа__итог">Готов для рекламы и соцсетей</span></span>
     </div>
@@ -504,8 +510,8 @@
       <span class="работа__формат">печать</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-menyu.webp" alt="Меню кофейни «Пенка» на деревянном столе: капучино в шапке, кофе и выпечка с ценами" loading="lazy" decoding="async">
-        <figure class="работа__было"><img src="img/bylo-menyu.webp" alt="Та же чашка капучино на столе, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
+        <img src="img/rabota-menyu.webp" srcset="img/rabota-menyu-480.webp 480w, img/rabota-menyu.webp 1086w" sizes="(max-width: 639px) 35vw, 30vw" width="1086" height="1448" alt="Меню кофейни «Пенка» на деревянном столе: капучино в шапке, кофе и выпечка с ценами" loading="lazy" decoding="async">
+        <figure class="работа__было"><img src="img/bylo-menyu.webp" srcset="img/bylo-menyu-200.webp 200w, img/bylo-menyu.webp 400w" sizes="(max-width: 639px) 15vw, 13vw" width="400" height="533" alt="Та же чашка капучино на столе, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
       </figure>
       <span class="работа__подпись"><b>Меню кофейни</b>Макет А4 с ценами и фото напитка<span class="работа__итог">Готов к печати</span></span>
     </div>
@@ -513,7 +519,7 @@
       <span class="работа__формат">сайт</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-sait-razgon.webp" alt="Сайт фитнес-студии «Разгон» на ноутбуке и телефоне: крупный заголовок «Сильнее за 8 недель», цифры студии и расписание на неделю" loading="lazy" decoding="async">
+        <img src="img/rabota-sait-razgon.webp" srcset="img/rabota-sait-razgon-480.webp 480w, img/rabota-sait-razgon.webp 1200w" sizes="(max-width: 639px) 35vw, 30vw" width="1200" height="900" alt="Сайт фитнес-студии «Разгон» на ноутбуке и телефоне: крупный заголовок «Сильнее за 8 недель», цифры студии и расписание на неделю" loading="lazy" decoding="async">
       </figure>
       <span class="работа__подпись"><b>Фитнес-студия «Разгон»</b>Первый экран, цифры и расписание<span class="работа__итог">Сразу для компьютера и телефона</span></span>
     </div>
@@ -521,7 +527,7 @@
       <span class="работа__формат">логотип</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-logotip.webp" alt="Логотип детейлинг-студии «Глянец»: линия кузова с искрой-бликом, на сером и чёрном фоне, на вывеске и визитке" loading="lazy" decoding="async">
+        <img src="img/rabota-logotip.webp" srcset="img/rabota-logotip-480.webp 480w, img/rabota-logotip.webp 1200w" sizes="(max-width: 639px) 35vw, 30vw" width="1200" height="900" alt="Логотип детейлинг-студии «Глянец»: линия кузова с искрой-бликом, на сером и чёрном фоне, на вывеске и визитке" loading="lazy" decoding="async">
       </figure>
       <span class="работа__подпись"><b>Детейлинг-студия «Глянец»</b>Знак, надпись и примеры в жизни<span class="работа__итог">Готов для вывески и визиток</span></span>
     </div>
@@ -529,8 +535,8 @@
       <span class="работа__формат">кампания</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-cvety.webp" alt="Кампания цветочного магазина «Белый сад»: баннер, пост и сторис с букетом белых роз" loading="lazy" decoding="async">
-        <figure class="работа__было"><img src="img/bylo-cvety.webp" alt="Тот же букет белых роз дома, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
+        <img src="img/rabota-cvety.webp" srcset="img/rabota-cvety-480.webp 480w, img/rabota-cvety.webp 1200w" sizes="(max-width: 639px) 35vw, 30vw" width="1200" height="900" alt="Кампания цветочного магазина «Белый сад»: баннер, пост и сторис с букетом белых роз" loading="lazy" decoding="async">
+        <figure class="работа__было"><img src="img/bylo-cvety.webp" srcset="img/bylo-cvety-200.webp 200w, img/bylo-cvety.webp 400w" sizes="(max-width: 639px) 15vw, 13vw" width="400" height="533" alt="Тот же букет белых роз дома, обычное фото с телефона" loading="lazy" decoding="async"><figcaption>было</figcaption></figure>
       </figure>
       <span class="работа__подпись"><b>Цветочный магазин</b>Баннер, сторис и пост в одном стиле<span class="работа__итог">Одна кампания на все площадки</span></span>
     </div>
@@ -538,7 +544,7 @@
       <span class="работа__формат">презентация</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-prezentaciya-most.webp" alt="Четыре слайда презентации онлайн-школы английского «Мост»: обложка с мостом, как проходят занятия, путь за три месяца, цены и кнопка записи" loading="lazy" decoding="async">
+        <img src="img/rabota-prezentaciya-most.webp" srcset="img/rabota-prezentaciya-most-480.webp 480w, img/rabota-prezentaciya-most.webp 1200w" sizes="(max-width: 639px) 35vw, 30vw" width="1200" height="900" alt="Четыре слайда презентации онлайн-школы английского «Мост»: обложка с мостом, как проходят занятия, путь за три месяца, цены и кнопка записи" loading="lazy" decoding="async">
       </figure>
       <span class="работа__подпись"><b>Школа английского «Мост»</b>Четыре слайда в одном стиле<span class="работа__итог">Готова к показу и рассылке</span></span>
     </div>
@@ -546,7 +552,7 @@
       <span class="работа__формат">персонаж</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-enot.webp" alt="Енот-курьер в оранжевой кепке и с жёлтым рюкзаком в четырёх сценах: на самокате, у двери, в снегу, на наклейке" loading="lazy" decoding="async">
+        <img src="img/rabota-enot.webp" srcset="img/rabota-enot-480.webp 480w, img/rabota-enot.webp 1200w" sizes="(max-width: 639px) 35vw, 30vw" width="1200" height="900" alt="Енот-курьер в оранжевой кепке и с жёлтым рюкзаком в четырёх сценах: на самокате, у двери, в снегу, на наклейке" loading="lazy" decoding="async">
       </figure>
       <span class="работа__подпись"><b>Енот-курьер</b>Фирменный персонаж службы доставки<span class="работа__итог">Одинаковый в любой сцене</span></span>
     </div>
@@ -554,7 +560,7 @@
       <span class="работа__формат">фотосессия</span>
       <span class="работа__свет" aria-hidden="true"></span>
       <figure class="мокап работа__вид">
-        <img src="img/rabota-fotosessiya.webp" alt="Нейрофотосессия: одна и та же женщина в четырёх образах — в офисе, в кофейне, вечером у реки, в осеннем парке" loading="lazy" decoding="async">
+        <img src="img/rabota-fotosessiya.webp" srcset="img/rabota-fotosessiya-480.webp 480w, img/rabota-fotosessiya.webp 1200w" sizes="(max-width: 639px) 70vw, 30vw" width="1200" height="900" alt="Нейрофотосессия: одна и та же женщина в четырёх образах — в офисе, в кофейне, вечером у реки, в осеннем парке" loading="lazy" decoding="async">
       </figure>
       <span class="работа__подпись"><b>Нейрофотосессия</b>Один герой — четыре образа<span class="работа__итог">Без выезда на съёмку</span></span>
     </div>
