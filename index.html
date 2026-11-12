@@ -129,7 +129,7 @@
       <div class="первый-экран__действие"><a class="кнопка кнопка--главная" href="https://t.me/Annaneyra">Написать в Телеграм</a></div>
     </div>
     <figure class="картинка картинка--фото картинка--край первый-экран__картинка" style="--лицо-в-кадре: .28">
-      <picture><source media="(max-width: 899px)" srcset="img/neyra-telefon.webp"><img src="img/neyra.webp" alt="Собираю на нейросетях то, на что у вас нет времени" data-лицо="50,22" fetchpriority="high"></picture>
+      <picture><source media="(max-width: 599px)" srcset="img/neyra-telefon-small.webp"><source media="(max-width: 899px)" srcset="img/neyra-telefon.webp"><img src="img/neyra.webp" alt="Собираю на нейросетях то, на что у вас нет времени" data-лицо="50,22" fetchpriority="high"></picture>
     </figure>
   </div>
 </section>
@@ -224,6 +224,58 @@
 .блок--первый-экран .след-холст {
   position: absolute; inset: 0; width: 100%; height: 100%;
   pointer-events: none; z-index: 6;
+}
+
+/* 12.11.2026: общий мобильный вид растягивал кадр 3:4 на всю ширину планшета.
+   На 768×1024 он занимал 1024 px высоты, а на телефоне лёжа — 1125 px, поэтому
+   заголовок и кнопка оказывались ниже первого окна. Между телефоном и компьютером
+   используем самостоятельный разворот: смысл слева, Нейра справа. */
+@media (min-width: 600px) and (max-width: 899px) {
+  #экран-1 { min-height: 100svh; }
+  /* На промежуточной сетке слово остаётся в колонке Нейры и не заходит под оффер. */
+  #экран-1::before {
+    left: 74%;
+    font-size: clamp(64px, 9.4vw, 72px);
+  }
+  #экран-1 .блок__внутри {
+    width: calc(100% - 2 * var(--отступ-блока));
+    min-height: calc(100svh - 3.5rem);
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: start;
+  }
+  #экран-1 .первый-экран__текст {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    padding-block: clamp(.75rem, 4svh, 2.5rem);
+  }
+  #экран-1 .первый-экран__картинка {
+    order: 0;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    width: 100%;
+    height: calc(100svh - 4.5rem);
+    min-height: 0;
+    margin: 0;
+    aspect-ratio: auto;
+  }
+  #экран-1 .первый-экран__картинка img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+}
+
+/* На вертикальном планшете весь оффер начинается на уровне головы Нейры.
+   В коротком альбомном окне сохраняем верхнюю посадку, иначе CTA уйдёт ниже первого экрана. */
+@media (min-width: 600px) and (max-width: 899px) and (min-height: 700px) {
+  #экран-1 .первый-экран__текст {
+    padding-top: calc(22svh - 1rem);
+    padding-bottom: .75rem;
+  }
 }
 </style>
 <script>
